@@ -1,0 +1,86 @@
+.login-form {
+  margin-top: 20px;
+
+  &__header {
+    font-size: 20px;
+    margin-bottom: 35px;
+    position: relative;
+    &:before {
+      content: '';
+      width: 31px;
+      height: 38px;
+      display: inline-block;
+      position: absolute;
+      left: 30%;
+      top: 50%;
+      transform: translate(0, -50%);
+      background: url(../assets/img/logo.png);
+    }
+  }
+
+  &__field {
+    padding: 10px 12px 6px 6px;
+    font-size: 10px;
+    max-width: 185px;
+    margin: 0 auto 19px;
+  }
+
+  &__button {
+    color: #4eadcc;
+    border-radius: 20px;
+    min-width: 90px;
+    position: relative;
+    &:active {
+      outline: none;
+      &:focus {
+        outline: none;
+      }
+    }
+    &:focus {
+      outline: none;
+    }
+
+    &--loading {
+      text-indent: -9999px;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        left: 50%;
+        top: 50%;
+        margin-top: -13px;
+        margin-left: -13px;
+        background: url(../assets/img/gear.png) 50% no-repeat;
+        animation: logo-spin 2s linear infinite;
+      }
+
+    }
+  }
+}
+
+@keyframes logo-spin {
+  from { transform: rotateZ(0deg); }
+  to { transform: rotateZ(360deg); }
+}
+
+.login-success {
+  font-size: 20px;
+  position: relative;
+  margin-top: 50px;
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 38px;
+    height: 32px;
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translate(0, -50%);
+    background: url(../assets/img/success.png);
+  }
+}
+
+.container {
+  max-width: 360px;
+}

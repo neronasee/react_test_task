@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 const SubmitButton = ({text="Submit", processing=false}) => {
-	const processingClass = processing ? "login-form__button--loading" : ""
+	const processingClass = processing ? "login-form__button--loading disabled" : ""
 	return (
 		<button
 			type="submit"
